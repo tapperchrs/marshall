@@ -1,0 +1,29 @@
+.container {
+    grid-template-columns: 20px auto auto auto 20px;
+    grid-template-rows: 62px auto auto auto 70px;
+}
+nav {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    left:0px;
+    color: #FFF;
+}
+nav ul li{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bolder;
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+nav ul li img {
+    height: 
+}
