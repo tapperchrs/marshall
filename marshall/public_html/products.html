@@ -10,6 +10,10 @@ and open the template in the editor.
         <title>Marshall Products</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+                <link rel="icon" 
+              type="image/png" 
+              href="img/Marshall_Logo_mini_icon.png">
         <style>
             .gridContainer{
     grid-template-columns: auto auto;
@@ -22,59 +26,97 @@ and open the template in the editor.
 .gridContainer *{
     font-family: sans-serif;
 }
-nav{
-                background-color: #2081C3;
-                color: #F7F9F9;
-                grid-column-start: 1;
-                grid-column-end: span 5;
-                grid-row-start: 1;
-                grid-row-end: auto;
-                z-index: 10;
-            }
-            nav ul{
-                list-style-type:none;
-                margin:0;
-                padding:0;
-                overflow:hidden;
-            }
-            nav li{
-                float: left;
-            }
-            nav li:first-of-type{
-                margin-right: 100px;
-                font-weight:bold;
-            }
-            nav li:last-of-type{
-                display: none;
-            }
-            nav a:link, nav a:visited{
-                display:block;
-                width:160px;
-                background-color: #2081C3;
-                color: #F7F9F9;
-                text-align:center;
-                padding:6px;
-                text-decoration:none;
-                text-transform:uppercase;
-            }
-            nav a:hover, nav a:active{
-                background-color:#666;
-            }
+nav {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #000;
+    border-bottom: 1px solid #FBE9C5;
+    width: 100%;
+    top:0px;
+    left:0px;
+    color: #FFF;
+    position:fixed;
+}
+nav ul li{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bolder;
+    padding: 20px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #000;
+
+}
+nav ul li:first-of-type {
+    border: 1px solid #000;
+
+}
+nav ul li:hover {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    color: #CCC;
+    border-bottom: 1px solid #FBE9C5;
+}
+nav ul li:first-of-type:hover {
+    -webkit-transition: 1s;
+    transition: 0.6s;
+    color: #CCC;
+    border: 1px solid #FBE9C5;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    margin:0px;
+    padding:0px;
+    top:0px;
+    left: 0px;
+}
+nav ul li img {
+    height: 70px;
+    width: auto;
+}
+nav p {
+    color: white;
+    margin: 0px;
+}
 aside{
+    padding-top: 90px;
     color: #333;
     place-self: stretch;
-    border: 1px #333 solid;
+    border: 10px #333 solid;
     border-radius: 8px;
     float: left;
+    background-image: url(img/stanmore_02.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 aside a{
     color: coral;
     text-decoration: none;
 }
+aside p{
+    background-color: #fff;
+    opacity: 75%;
+}
 section{
     color: #333;
-    border: 1px #333 solid;
+    border: 10px #333 solid;
     border-radius: 8px;
+    background-image: url(img/hanwell_01.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 section a{
     color: coral;
@@ -83,6 +125,45 @@ section a{
 }
 section *{
     margin: 15px 20px;
+}
+section p{
+    background-color: #fff;
+    opacity: 75%;
+
+}
+footer {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color: #000;
+    bottom: 0px;
+    left: 0px;
+    right:0px;
+}
+footer ul{
+    margin: 0px;
+    display: block;
+    width: 50%;
+    margin-right:auto;
+    margin-left: auto;
+    vertical-align: middle;
+}
+footer ul li{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 25px;
+
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bolder;
+    padding: 20px 20px;
+    color: white;
+    font-size: 20px;
+}
+footer ul li img {
+    height: 24px;
+
 }
 @media only screen and (max-width: 769px) {
     header, aside, section, footer{
@@ -99,11 +180,10 @@ section *{
         <div class="gridContainer">
             <nav class="colStart1 colSpan2 rowStart1">
                 <ul>
-                    <li><a href="index.html" onClick="toggleNav()">Home</a></li>
-                    <li><a href="activities.html" onClick="toggleNav()">Activities</a></li>
-                    <li><a href="lodging.html" onClick="toggleNav()">Lodging</a></li>
-                    <li><a href="tips.html" onClick="toggleNav()">Tips</a></li>
-                    <li id="menu"><a href="#" onClick="toggleNav()">. . .</a></li>
+                    <li><a href="index.html"><img src="img/Marshall_Logo_sm.png" alt="Marshall Logo"/></a></li>
+                    <li><a href="products.html">PRODUCTS</a></LI>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></LI>
                 </ul>
             </nav>
             <aside class="colStart1 rowStart2">
@@ -189,7 +269,14 @@ $600.00 USD
 
             </section>
             <footer class=" colStart1 colSpan2 rowStart3">
-                <p>Marshall Speakers</p>
+                <footer>
+                <ul>
+                    <li>©Marshall Co. 2020 & <i>Nerds With Style</i></li>
+                    <li><img src="img/instagram.png" alt="Instagram"/></li>                
+                    <li><img src="img/twitter.png" alt="Twitter"/></li>                   
+
+                </ul>
+            </footer>
             </footer>
         </div>
     </body>
