@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -6,11 +7,190 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Marshall Products</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .gridContainer{
+    grid-template-columns: auto auto;
+    grid-template-rows: 75px auto 75px;
+    grid-gap: 10px;
+}
+/* 
+    Properties shared by all children of the grid container 
+*/
+.gridContainer *{
+    font-family: sans-serif;
+}
+nav{
+                background-color: #2081C3;
+                color: #F7F9F9;
+                grid-column-start: 1;
+                grid-column-end: span 5;
+                grid-row-start: 1;
+                grid-row-end: auto;
+                z-index: 10;
+            }
+            nav ul{
+                list-style-type:none;
+                margin:0;
+                padding:0;
+                overflow:hidden;
+            }
+            nav li{
+                float: left;
+            }
+            nav li:first-of-type{
+                margin-right: 100px;
+                font-weight:bold;
+            }
+            nav li:last-of-type{
+                display: none;
+            }
+            nav a:link, nav a:visited{
+                display:block;
+                width:160px;
+                background-color: #2081C3;
+                color: #F7F9F9;
+                text-align:center;
+                padding:6px;
+                text-decoration:none;
+                text-transform:uppercase;
+            }
+            nav a:hover, nav a:active{
+                background-color:#666;
+            }
+aside{
+    color: #333;
+    place-self: stretch;
+    border: 1px #333 solid;
+    border-radius: 8px;
+    float: left;
+}
+aside a{
+    color: coral;
+    text-decoration: none;
+}
+section{
+    color: #333;
+    border: 1px #333 solid;
+    border-radius: 8px;
+}
+section a{
+    color: coral;
+    text-decoration: none;
+    margin: 0px;
+}
+section *{
+    margin: 15px 20px;
+}
+@media only screen and (max-width: 769px) {
+    header, aside, section, footer{
+        margin: 5px 0px;
+    }
+    header{
+        position: sticky;
+        top: 0px;
+    }
+}
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="gridContainer">
+            <nav class="colStart1 colSpan2 rowStart1">
+                <ul>
+                    <li><a href="index.html" onClick="toggleNav()">Home</a></li>
+                    <li><a href="activities.html" onClick="toggleNav()">Activities</a></li>
+                    <li><a href="lodging.html" onClick="toggleNav()">Lodging</a></li>
+                    <li><a href="tips.html" onClick="toggleNav()">Tips</a></li>
+                    <li id="menu"><a href="#" onClick="toggleNav()">. . .</a></li>
+                </ul>
+            </nav>
+            <aside class="colStart1 rowStart2">
+                <h1>The Stanmore</h1>
+                <p>Small in size, but not subtle in sound, the Stanmore is a compact active stereo speaker that yields clean and precise sound even at high levels. Stanmore’s classic design is a throwback to the golden days of rock’n’roll, and its analogue interaction knobs give you custom control of your music. With a vintage-looking front fret, brass details, and iconic script logo, the Stanmore is right at home with the rest of your Marshall collection. Hook it up wirelessly via Bluetooth, use the RCA input to plug in your record player, or simply connect the coil cord that’s included to your phone using the 3.5mm auxiliary input. The Stanmore is also compatible with devices with optical output, like Apple TV.
+<br><br>
+Classic Marshall, Modern Listening<br>
+The Stanmore is a loudspeaker created for today’s world. With multiple connection sources, there are loads of ways to connect to your speaker, whether via your phone, vinyl player, tv or wirelessly via the latest version of Bluetooth®, featuring APTX technology.
+<br><br>
+With multiple music source options, you can connect to the stanmore wirelessly via Bluetooth with APTX technology or through one of three audio inputs: 3.5mm input, rca input, or the optical audio input.
+<br><br>
+The Stanmore comes with two standby modes, powersaver and standard, to minimize your speaker’s environmental impact when not actively in use.
+<br><br>
+
+All About The Sound<br>
+Stanmore may be a compact stereo speaker, but its sound is nothing short of large. Built with advanced components that deliver an accurate response throughout the frequency range, the stanmore packs a punch without compromising the details.
+<br><br>
+The sound is rich and articulate across the entire spectrum, from the deep and powerful bass, throughout the midrange and on to the highest highs. The overall effect is brilliantly reproduced music, full of energy and drive. Adjustable bass and treble dials provide you with custom control, so your music always sounds just how you like it.
+<br><br>
+
+Technical Information<br><br>
+Mains Input Voltage 100-240v~ /200w<br><br>
+Nominal Rating 100-240v~<br><br>
+Absolute Min/max 90-264v~<br><br>
+Mains Frequency 50-60hz<br><br>
+Max Peak Power Consumption 200w/td><br><br>
+Connectivity<br><br>
+Bluetooth, Standard V4.0 + Edr APTX Codec<br><br>
+Input 1 - 3.5mm 1x<br><br>
+Iinput 2 – RCA 1x<br><br>
+Optical Input 1x<br><br>
+Digital Class D Amplifier<br><br>
+Custom Made 40mm Dynamic Driver<br><br>
+¾” Dome Tweeters	2x<br><br>
+Sensitivity 100mv@1khz=99db Spl<br><br>
+5 ¼” Woofer 1x<br><br>
+Bass And Treble Tone Controls<br><br>
+Frequency Response 45- 22.000hz +-3db<br><br>
+Crossover Frequency 2500hz<br><br>
+Two Standby Modes Powersaver Mode (0,43w) And Standard Mode (8,7w)<br><br>
+Max Power Output 80w Rms<br><br>
+Weight 5.10kg<br><br>
+Size 350 X 185 X 185mm<br><br>
+
+
+One Year Limited Warranty<br><br>
+$400.00 USD
+</p>
+            </aside>
+            <section class="colStart2 rowStart2">
+                <h1>The Hanwell</h1>
+                <p>
+                    The Hanwell embodies Marshall’s legacy of loud. Hailing from a line of 50th anniversary products, the Hanwell moves Marshall’s heritage of big stage performance out of the arena and into your personal space. Delivering a sound that resonates with the presence and power of live music, the hanwell is a carefully crafted machine, designed to attain that trademark Marshall tone. Its dual long-throw woofers produce super lows and hi-fi tweeters yield extended highs that render the sound sharp and clear, like sitting front row.
+<br><br>Classic Marshall
+The Hanwell is housed in wooden cabinet, clad in black vinyl and features an analog power switch and controls for volume, bass and treble. The fret cloth and gold logo on the front is borrowed from vintage Marshall amplifiers, and the body is outlined with gold piping for a celebratory effect.
+<br><br>
+As a tribute to Marshall’s 50-year legacy, each Hanwell is branded with a numbered anniversary edition commemorative badge.
+<br><br>
+
+The Sound Deliverer<br><br>
+Delivering a sound that resonates with the presence and power of live music, the Hanwell is a carefully crafted machine, designed to attain that trademark Marshall tone.
+<br><br>
+Its dual long-throw woofers produce super lows and hi-fi tweeters yield sharp extended highs, rendering the sound sharp and clear, like sitting front row.
+<br><br>
+
+Technical Information<br><br>
+6” Long Throw Hi-fi Woofers 2x<br><br>
+Ferrofluid Cooled Hi-fi Dome Tweeters 2x<br><br>
+Pwm Amplifier 100w (Cool Running)<br><br>
+Over Temperature Protection<br><br>
+Frequency Response 35hz-20khz +/- 5db<br><br>
+Bass And Treble Tone Controls<br><br>
+Max Output 110db Spl@1m<br><br>
+Mains Input Voltage 110-120vac 50/60hz US and Japan Version, 220-230vac 50/60hz EU Version.<br><br>
+Max Power Consumption 200w<br><br>
+Dimensions 435 X 193 X 297mm / 17.15 X 7.60 X 11.70"<br><br>
+Weight	 10.5kg / 23lb<br><br>
+
+<br><br>
+One Year Limited Warranty<br><br>
+$600.00 USD
+                </p>
+
+            </section>
+            <footer class=" colStart1 colSpan2 rowStart3">
+                <p>Marshall Speakers</p>
+            </footer>
+        </div>
     </body>
 </html>
