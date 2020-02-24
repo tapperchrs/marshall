@@ -272,3 +272,50 @@ footer ul li img {
     height: 24px;
 
 }
+.contact{
+    background-image: url(img/marshalls_hp.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+  
+}
+
+.Cbody {
+font-family: 'Didact Gothic', sans-serif;
+text-align: center;
+size: 30px;
+padding: 0px;
+
+}
+
+.location{
+   text-align: center;
+   size: 20px;
+   font-family: 'Didact Gothic', sans-serif;
+}
+
+.email{
+  text-align: center;
+  margin-top: 360px;
+}
+
+.btn{
+    border: 1px solid black;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+    cursor: pointer;
+    margin: 10px;
+}
+
