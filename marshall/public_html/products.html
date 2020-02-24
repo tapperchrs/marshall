@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -10,170 +9,170 @@ and open the template in the editor.
         <title>Marshall Products</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-                <link rel="icon" 
+
+        <link rel="icon" 
               type="image/png" 
               href="img/Marshall_Logo_mini_icon.png">
         <style>
             .gridContainer{
-    grid-template-columns: auto auto;
-    grid-template-rows: 75px auto 75px;
-    grid-gap: 10px;
-}
-/* 
-    Properties shared by all children of the grid container 
-*/
-.gridContainer *{
-    font-family: sans-serif;
-}
-nav {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background-color: #000;
-    border-bottom: 1px solid #FBE9C5;
-    width: 100%;
-    top:0px;
-    left:0px;
-    color: #FFF;
-    position:fixed;
-}
-nav ul li{
-    list-style-type: none;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bolder;
-    padding: 20px 20px;
-    vertical-align: middle;
-    border-bottom: 1px solid #000;
+                grid-template-columns: auto auto;
+                grid-template-rows: 75px auto 75px;
+                grid-gap: 10px;
+            }
+            /* 
+                Properties shared by all children of the grid container 
+            */
+            .gridContainer *{
+                font-family: sans-serif;
+            }
+            nav {
+                grid-column-start: 1;
+                grid-column-end: 7;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                background-color: #000;
+                border-bottom: 1px solid #FBE9C5;
+                width: 100%;
+                top:0px;
+                left:0px;
+                color: #FFF;
+                position:fixed;
+            }
+            nav ul li{
+                list-style-type: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 24px;
+                font-family: 'Maven Pro', sans-serif;
+                font-weight: bolder;
+                padding: 20px 20px;
+                vertical-align: middle;
+                border-bottom: 1px solid #000;
 
-}
-nav ul li:first-of-type {
-    border: 1px solid #000;
+            }
+            nav ul li:first-of-type {
+                border: 1px solid #000;
 
-}
-nav ul li:hover {
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
-    color: #CCC;
-    border-bottom: 1px solid #FBE9C5;
-}
-nav ul li:first-of-type:hover {
-    -webkit-transition: 1s;
-    transition: 0.6s;
-    color: #CCC;
-    border: 1px solid #FBE9C5;
-}
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
+            }
+            nav ul li:hover {
+                -webkit-transition: 0.6s;
+                transition: 0.6s;
+                color: #CCC;
+                border-bottom: 1px solid #FBE9C5;
+            }
+            nav ul li:first-of-type:hover {
+                -webkit-transition: 1s;
+                transition: 0.6s;
+                color: #CCC;
+                border: 1px solid #FBE9C5;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+            }
 
-nav ul {
-    margin:0px;
-    padding:0px;
-    top:0px;
-    left: 0px;
-}
-nav ul li img {
-    height: 70px;
-    width: auto;
-}
-nav p {
-    color: white;
-    margin: 0px;
-}
-aside{
-    padding-top: 90px;
-    color: #333;
-    place-self: stretch;
-    border: 10px #333 solid;
-    border-radius: 8px;
-    float: left;
-    background-image: url(img/stanmore_02.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-aside a{
-    color: coral;
-    text-decoration: none;
-}
-aside p{
-    background-color: #fff;
-    opacity: 75%;
-}
-section{
-    color: #333;
-    border: 10px #333 solid;
-    border-radius: 8px;
-    background-image: url(img/hanwell_01.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-section a{
-    color: coral;
-    text-decoration: none;
-    margin: 0px;
-}
-section *{
-    margin: 15px 20px;
-}
-section p{
-    background-color: #fff;
-    opacity: 75%;
+            nav ul {
+                margin:0px;
+                padding:0px;
+                top:0px;
+                left: 0px;
+            }
+            nav ul li img {
+                height: 70px;
+                width: auto;
+            }
+            nav p {
+                color: white;
+                margin: 0px;
+            }
+            aside{
+                padding-top: 90px;
+                color: #333;
+                place-self: stretch;
+                border: 10px #333 solid;
+                border-radius: 8px;
+                float: left;
+                background-image: url(img/stanmore_02.jpg);
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
 
-}
-footer {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    background-color: #000;
-    bottom: 0px;
-    left: 0px;
-    right:0px;
-}
-footer ul{
-    margin: 0px;
-    display: block;
-    width: 50%;
-    margin-right:auto;
-    margin-left: auto;
-    vertical-align: middle;
-}
-footer ul li{
-    list-style-type: none;
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px 25px;
+            }
+            aside a{
+                color: coral;
+                text-decoration: none;
+            }
+            aside p{
+                background-color: #fff;
+                opacity: 75%;
+            }
+            section{
+                color: #333;
+                border: 10px #333 solid;
+                border-radius: 8px;
+                background-image: url(img/hanwell_01.jpg);
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            section a{
+                color: coral;
+                text-decoration: none;
+                margin: 0px;
+            }
+            section *{
+                margin: 15px 20px;
+            }
+            section p{
+                background-color: #fff;
+                opacity: 75%;
 
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bolder;
-    padding: 20px 20px;
-    color: white;
-    font-size: 20px;
-}
-footer ul li img {
-    height: 24px;
+            }
+            footer {
+                grid-column-start: 1;
+                grid-column-end: 7;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                background-color: #000;
+                bottom: 0px;
+                left: 0px;
+                right:0px;
+            }
+            footer ul{
+                margin: 0px;
+                display: block;
+                width: 50%;
+                margin-right:auto;
+                margin-left: auto;
+                vertical-align: middle;
+            }
+            footer ul li{
+                list-style-type: none;
+                text-decoration: none;
+                display: inline-block;
+                padding: 5px 25px;
 
-}
-@media only screen and (max-width: 769px) {
-    header, aside, section, footer{
-        margin: 5px 0px;
-    }
-    header{
-        position: sticky;
-        top: 0px;
-    }
-}
+                font-family: 'Maven Pro', sans-serif;
+                font-weight: bolder;
+                padding: 20px 20px;
+                color: white;
+                font-size: 20px;
+            }
+            footer ul li img {
+                height: 24px;
+
+            }
+            @media only screen and (max-width: 769px) {
+                header, aside, section, footer{
+                    margin: 5px 0px;
+                }
+                header{
+                    position: sticky;
+                    top: 0px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -189,94 +188,101 @@ footer ul li img {
             <aside class="colStart1 rowStart2">
                 <h1>The Stanmore</h1>
                 <p>Small in size, but not subtle in sound, the Stanmore is a compact active stereo speaker that yields clean and precise sound even at high levels. Stanmore’s classic design is a throwback to the golden days of rock’n’roll, and its analogue interaction knobs give you custom control of your music. With a vintage-looking front fret, brass details, and iconic script logo, the Stanmore is right at home with the rest of your Marshall collection. Hook it up wirelessly via Bluetooth, use the RCA input to plug in your record player, or simply connect the coil cord that’s included to your phone using the 3.5mm auxiliary input. The Stanmore is also compatible with devices with optical output, like Apple TV.
-<br><br>
-Classic Marshall, Modern Listening<br>
-The Stanmore is a loudspeaker created for today’s world. With multiple connection sources, there are loads of ways to connect to your speaker, whether via your phone, vinyl player, tv or wirelessly via the latest version of Bluetooth®, featuring APTX technology.
-<br><br>
-With multiple music source options, you can connect to the stanmore wirelessly via Bluetooth with APTX technology or through one of three audio inputs: 3.5mm input, rca input, or the optical audio input.
-<br><br>
-The Stanmore comes with two standby modes, powersaver and standard, to minimize your speaker’s environmental impact when not actively in use.
-<br><br>
+                    <br><br>
+                    Classic Marshall, Modern Listening<br>
+                    The Stanmore is a loudspeaker created for today’s world. With multiple connection sources, there are loads of ways to connect to your speaker, whether via your phone, vinyl player, tv or wirelessly via the latest version of Bluetooth®, featuring APTX technology.
+                    <br><br>
+                    With multiple music source options, you can connect to the stanmore wirelessly via Bluetooth with APTX technology or through one of three audio inputs: 3.5mm input, rca input, or the optical audio input.
+                    <br><br>
+                    The Stanmore comes with two standby modes, powersaver and standard, to minimize your speaker’s environmental impact when not actively in use.
+                    <br><br>
 
-All About The Sound<br>
-Stanmore may be a compact stereo speaker, but its sound is nothing short of large. Built with advanced components that deliver an accurate response throughout the frequency range, the stanmore packs a punch without compromising the details.
-<br><br>
-The sound is rich and articulate across the entire spectrum, from the deep and powerful bass, throughout the midrange and on to the highest highs. The overall effect is brilliantly reproduced music, full of energy and drive. Adjustable bass and treble dials provide you with custom control, so your music always sounds just how you like it.
-<br><br>
+                    All About The Sound<br>
+                    Stanmore may be a compact stereo speaker, but its sound is nothing short of large. Built with advanced components that deliver an accurate response throughout the frequency range, the stanmore packs a punch without compromising the details.
+                    <br><br>
+                    The sound is rich and articulate across the entire spectrum, from the deep and powerful bass, throughout the midrange and on to the highest highs. The overall effect is brilliantly reproduced music, full of energy and drive. Adjustable bass and treble dials provide you with custom control, so your music always sounds just how you like it.
+                    <br><br>
 
-Technical Information<br><br>
-Mains Input Voltage 100-240v~ /200w<br><br>
-Nominal Rating 100-240v~<br><br>
-Absolute Min/max 90-264v~<br><br>
-Mains Frequency 50-60hz<br><br>
-Max Peak Power Consumption 200w/td><br><br>
-Connectivity<br><br>
-Bluetooth, Standard V4.0 + Edr APTX Codec<br><br>
-Input 1 - 3.5mm 1x<br><br>
-Iinput 2 – RCA 1x<br><br>
-Optical Input 1x<br><br>
-Digital Class D Amplifier<br><br>
-Custom Made 40mm Dynamic Driver<br><br>
-¾” Dome Tweeters	2x<br><br>
-Sensitivity 100mv@1khz=99db Spl<br><br>
-5 ¼” Woofer 1x<br><br>
-Bass And Treble Tone Controls<br><br>
-Frequency Response 45- 22.000hz +-3db<br><br>
-Crossover Frequency 2500hz<br><br>
-Two Standby Modes Powersaver Mode (0,43w) And Standard Mode (8,7w)<br><br>
-Max Power Output 80w Rms<br><br>
-Weight 5.10kg<br><br>
-Size 350 X 185 X 185mm<br><br>
+                    Technical Information<br><br>
+                    Mains Input Voltage 100-240v~ /200w<br><br>
+                    Nominal Rating 100-240v~<br><br>
+                    Absolute Min/max 90-264v~<br><br>
+                    Mains Frequency 50-60hz<br><br>
+                    Max Peak Power Consumption 200w/td><br><br>
+                    Connectivity<br><br>
+                    Bluetooth, Standard V4.0 + Edr APTX Codec<br><br>
+                    Input 1 - 3.5mm 1x<br><br>
+                    Iinput 2 – RCA 1x<br><br>
+                    Optical Input 1x<br><br>
+                    Digital Class D Amplifier<br><br>
+                    Custom Made 40mm Dynamic Driver<br><br>
+                    ¾” Dome Tweeters	2x<br><br>
+                    Sensitivity 100mv@1khz=99db Spl<br><br>
+                    5 ¼” Woofer 1x<br><br>
+                    Bass And Treble Tone Controls<br><br>
+                    Frequency Response 45- 22.000hz +-3db<br><br>
+                    Crossover Frequency 2500hz<br><br>
+                    Two Standby Modes Powersaver Mode (0,43w) And Standard Mode (8,7w)<br><br>
+                    Max Power Output 80w Rms<br><br>
+                    Weight 5.10kg<br><br>
+                    Size 350 X 185 X 185mm<br><br>
 
 
-One Year Limited Warranty<br><br>
-$400.00 USD
-</p>
+                    One Year Limited Warranty<br><br>
+                    $400.00 USD
+                    <a href="purchase.html">
+                        Click To Buy
+                    </a>
+                </p>
+
             </aside>
             <section class="colStart2 rowStart2">
                 <h1>The Hanwell</h1>
                 <p>
                     The Hanwell embodies Marshall’s legacy of loud. Hailing from a line of 50th anniversary products, the Hanwell moves Marshall’s heritage of big stage performance out of the arena and into your personal space. Delivering a sound that resonates with the presence and power of live music, the hanwell is a carefully crafted machine, designed to attain that trademark Marshall tone. Its dual long-throw woofers produce super lows and hi-fi tweeters yield extended highs that render the sound sharp and clear, like sitting front row.
-<br><br>Classic Marshall
-The Hanwell is housed in wooden cabinet, clad in black vinyl and features an analog power switch and controls for volume, bass and treble. The fret cloth and gold logo on the front is borrowed from vintage Marshall amplifiers, and the body is outlined with gold piping for a celebratory effect.
-<br><br>
-As a tribute to Marshall’s 50-year legacy, each Hanwell is branded with a numbered anniversary edition commemorative badge.
-<br><br>
+                    <br><br>Classic Marshall
+                    The Hanwell is housed in wooden cabinet, clad in black vinyl and features an analog power switch and controls for volume, bass and treble. The fret cloth and gold logo on the front is borrowed from vintage Marshall amplifiers, and the body is outlined with gold piping for a celebratory effect.
+                    <br><br>
+                    As a tribute to Marshall’s 50-year legacy, each Hanwell is branded with a numbered anniversary edition commemorative badge.
+                    <br><br>
 
-The Sound Deliverer<br><br>
-Delivering a sound that resonates with the presence and power of live music, the Hanwell is a carefully crafted machine, designed to attain that trademark Marshall tone.
-<br><br>
-Its dual long-throw woofers produce super lows and hi-fi tweeters yield sharp extended highs, rendering the sound sharp and clear, like sitting front row.
-<br><br>
+                    The Sound Deliverer<br><br>
+                    Delivering a sound that resonates with the presence and power of live music, the Hanwell is a carefully crafted machine, designed to attain that trademark Marshall tone.
+                    <br><br>
+                    Its dual long-throw woofers produce super lows and hi-fi tweeters yield sharp extended highs, rendering the sound sharp and clear, like sitting front row.
+                    <br><br>
 
-Technical Information<br><br>
-6” Long Throw Hi-fi Woofers 2x<br><br>
-Ferrofluid Cooled Hi-fi Dome Tweeters 2x<br><br>
-Pwm Amplifier 100w (Cool Running)<br><br>
-Over Temperature Protection<br><br>
-Frequency Response 35hz-20khz +/- 5db<br><br>
-Bass And Treble Tone Controls<br><br>
-Max Output 110db Spl@1m<br><br>
-Mains Input Voltage 110-120vac 50/60hz US and Japan Version, 220-230vac 50/60hz EU Version.<br><br>
-Max Power Consumption 200w<br><br>
-Dimensions 435 X 193 X 297mm / 17.15 X 7.60 X 11.70"<br><br>
-Weight	 10.5kg / 23lb<br><br>
+                    Technical Information<br><br>
+                    6” Long Throw Hi-fi Woofers 2x<br><br>
+                    Ferrofluid Cooled Hi-fi Dome Tweeters 2x<br><br>
+                    Pwm Amplifier 100w (Cool Running)<br><br>
+                    Over Temperature Protection<br><br>
+                    Frequency Response 35hz-20khz +/- 5db<br><br>
+                    Bass And Treble Tone Controls<br><br>
+                    Max Output 110db Spl@1m<br><br>
+                    Mains Input Voltage 110-120vac 50/60hz US and Japan Version, 220-230vac 50/60hz EU Version.<br><br>
+                    Max Power Consumption 200w<br><br>
+                    Dimensions 435 X 193 X 297mm / 17.15 X 7.60 X 11.70"<br><br>
+                    Weight	 10.5kg / 23lb<br><br>
 
-<br><br>
-One Year Limited Warranty<br><br>
-$600.00 USD
+                    <br><br>
+                    One Year Limited Warranty<br><br>
+                    $600.00 USD
+                    <a href="purchase.html">
+                        Click To Buy
+                    </a>
                 </p>
 
             </section>
             <footer class=" colStart1 colSpan2 rowStart3">
                 <footer>
-                <ul>
-                    <li>©Marshall Co. 2020 & <i>Nerds With Style</i></li>
-                    <li><img src="img/instagram.png" alt="Instagram"/></li>                
-                    <li><img src="img/twitter.png" alt="Twitter"/></li>                   
+                    <ul>
+                        <li>©Marshall Co. 2020 & <i>Nerds With Style</i></li>
+                        <li><img src="img/instagram.png" alt="Instagram"/></li>                
+                        <li><img src="img/twitter.png" alt="Twitter"/></li>                   
 
-                </ul>
-            </footer>
+                    </ul>
+                </footer>
             </footer>
         </div>
     </body>

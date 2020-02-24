@@ -1,7 +1,10 @@
 @media only screen and (max-width: 769px) {
-    .container, .hero, .content {
+    .container, nav, .hero, .content {
         display: flex;
         flex-direction: column;
+    }
+    .content a h1{
+        font-size: 18px;
     }
 }
 html {
@@ -33,6 +36,7 @@ nav {
     left:0px;
     color: #FFF;
     position:fixed;
+    z-index: 5;
 }
 nav ul li{
     list-style-type: none;
@@ -98,15 +102,15 @@ nav p {
     grid-template-rows: 1fr 1fr 1fr; 
 }
 .text {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
     grid-row-start:2;
     grid-row-end: 3;
     background-color: #000;
     font-family: 'Didact Gothic', sans-serif;
     color: white;
     text-align: center;
-    box-shadow: 24px 24px 16px #111;
+/*    box-shadow: 24px 24px 16px #000;*/
 }
 .hero .text h1 {
     font-size: 72px;
@@ -145,13 +149,18 @@ nav p {
     padding: 10px;
     font-size: 18px;
 }
+.content input {
+    width: 100%;
+    font-size: 16px;
+    margin: 5px;
+}
 .content .btn {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start:5;
     grid-row-end: 6;
 }
-.content a {
+.btn a {
     width: 45%;
     margin-left: auto;
     margin-right: auto;
@@ -189,14 +198,45 @@ nav p {
     grid-row-start:2;
     grid-row-end: 4;
     padding: 10px;
-    font-size: 18px;
+    font-family: 'Didact Gothic', sans-serif;
 }
 .content .card {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start:2;
+    grid-row-end: 4;
+    padding: 10px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+.content .buybtn {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:5;
     grid-row-end: 6;
-    
+    padding: 10px;
+    font-family: 'Didact Gothic', sans-serif;
+    height: 70px;
+}
+.buybtn a {
+    width: 25%;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #000;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.buybtn h1 {
+    margin: 0;
+    text-align: center;
+}
+.content .buybtn a:hover {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    background-color: #444;
 }
 footer {
     grid-column-start: 1;
