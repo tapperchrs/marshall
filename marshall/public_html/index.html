@@ -14,56 +14,78 @@ and open the template in the editor.
         <link rel="icon" 
               type="image/png" 
               href="img/Marshall_Logo_mini_icon.png">
+        <script>
+            function toggleNav() {
+                if (window.innerWidth > 769)
+                    return;
+                var items = document.querySelectorAll('nav a');
+                var len = items.length;
+                for (var i = 0; i < len; i++) {
+                    var vis = items[i].style.display + '';
+                    if (vis == 'block') {
+                        items[i].style.display = 'none';
+                        document.querySelector("nav button").innerHTML = "&#x2630;";
+                    } else {
+                        items[i].style.display = 'block';
+                        document.querySelector("nav button").innerHTML = "X";
+                    }
+                }
+                document.querySelector('nav a:first-of-type').style.display = 'inherit';
 
+            }
+        </script>
     </head>
     <body>
+        <nav>
+            <button style="color:#FFF;" onClick="toggleNav()">&#x2630;</button>
+            <a href="index.html" onClick="toggleNav()">
+                <img src="img/Marshall_Logo_sm.png" alt=""/>
+            </a>
+            <a href="products.html" onClick="toggleNav()">Products</a>
+            <a href="contact.html" onClick="toggleNav()">Contact</a>
+            <a href="about.html" onClick="toggleNav()">About</a>
+            <a href="purchase.html" onClick="toggleNav()">Cart</a>
+        </nav> 
         <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html"><img src="img/Marshall_Logo_sm.png" alt="Marshall Logo"/></a></li>
-                    <li><a href="products.html">PRODUCTS</a></LI>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT US</a></LI>
-                </ul>
-            </nav> 
+
             <div class="hero">
                 <div class="text">
-                    <h1>Welcome to Marshall Speakers</h1>
-                    <h2>Presented by <i>Nerds With Style</i></h2>
-
+                    <img src="img/Marshall_Logo_sm.png" alt=""/>
                 </div>
             </div>
             <div class="content">
-                <div class="title">
-                    <h1>Featured Product</h1>
-                </div>
+                <!--                <div class="title">
+                                    <h1>Featured Product</h1>
+                                </div>-->
                 <div class="message">
-                    <h1>Hanwell 04</h1>
+                    <h1>Marshall Speakers</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
-                    </p>
+                        The heavy sound of Marshall has been carried over the world for half a century. Breathless roadies and roaring trucks have worked hard to make Marshall heard all across the globe. Now, the time has come for you to carry this magnificent burden of rock ‘n’ roll all by yourself.
+
+                        Spending half a century on tour with the most prominent and untamed musicians builds experience and a feel for what really works. This unparalleled amount of wisdom has been distilled and fused into every part of Marshall speakers.
+
+                        Nothing has been compromised when expanding the Marshall heritage of big stage performance to the individual enjoyment of good music.                    </p>
+
                 </div>
-                
-                    <div class="btn">
-                        <a href="purchase.html">
-                        <h1>Buy Now</h1>
-                        </a>
-                    </div>
-                
+
+                <div class="btn">
+                    <a href="products.html">
+                        <h1>View Our Products</h1>
+                    </a>
+                </div>
+
                 <div class="img">
 
                 </div>
             </div>
             <footer>
-                <ul>
-                    <li>©Marshall Co. 2020 & <i>Nerds With Style</i></li>
-                    <li><img src="img/instagram.png" alt="Instagram"/></li>                
-                    <li><img src="img/twitter.png" alt="Twitter"/></li>                   
-
-                </ul>
+                <p>
+                    ©Marshall Co. 2020 & <i>Nerds With Style</i>
+                </p>
+                <p>
+                    <img style="height: 24px" src="img/instagram.png" alt="Instagram"/>                
+                    <img style="height: 24px" src="img/twitter.png" alt="Twitter"/>                 
+                </p>
             </footer>
         </div>
     </body>

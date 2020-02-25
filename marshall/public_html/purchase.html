@@ -14,18 +14,39 @@ and open the template in the editor.
         <link rel="icon" 
               type="image/png" 
               href="img/Marshall_Logo_mini_icon.png">
+<script>
+            function toggleNav() {
+                if (window.innerWidth > 769)
+                    return;
+                var items = document.querySelectorAll('nav a');
+                var len = items.length;
+                for (var i = 0; i < len; i++) {
+                    var vis = items[i].style.display + '';
+                    if (vis == 'block') {
+                        items[i].style.display = 'none';
+                        document.querySelector("nav button").innerHTML = "&#x2630;";
+                    } else {
+                        items[i].style.display = 'block';
+                        document.querySelector("nav button").innerHTML = "X";
+                    }
+                }
+                document.querySelector('nav a:first-of-type').style.display = 'inherit';
 
+            }
+        </script>
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html"><img src="img/Marshall_Logo_sm.png" alt="Marshall Logo"/></a></li>
-                    <li><a href="products.html">PRODUCTS</a></LI>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT US</a></LI>
-                </ul>
-            </nav>           
+        <nav>
+            <button style="color:#FFF;" onClick="toggleNav()">&#x2630;</button>
+            <a href="index.html" onClick="toggleNav()">
+                <img src="img/Marshall_Logo_sm.png" alt=""/>
+            </a>
+            <a href="products.html" onClick="toggleNav()">Products</a>
+            <a href="contact.html" onClick="toggleNav()">Contact</a>
+            <a href="about.html" onClick="toggleNav()">About</a>
+            <a href="purchase.html" onClick="toggleNav()">Cart</a>
+        </nav> 
+        <div class="container">        
             <div class="hero">
             
             </div>
@@ -68,12 +89,13 @@ and open the template in the editor.
                     </div>
             </div>
             <footer>
-                <ul>
-                    <li>©Marshall Co. 2020 & <i>Nerds With Style</i></li>
-                    <li><img src="img/instagram.png" alt="Instagram"/></li>                
-                    <li><img src="img/twitter.png" alt="Twitter"/></li>                   
-
-                </ul>
+                <p>
+                    ©Marshall Co. 2020 & <i>Nerds With Style</i>
+                </p>
+                <p>
+                    <img style="height: 24px" src="img/instagram.png" alt="Instagram"/>                
+                    <img style="height: 24px" src="img/twitter.png" alt="Twitter"/>                 
+                </p>
             </footer>
         </div>
     </body>

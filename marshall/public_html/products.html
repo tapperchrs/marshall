@@ -9,10 +9,31 @@ and open the template in the editor.
         <title>Marshall Products</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link href="marshall.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Maven+Pro|Quicksand|Rubik:700&display=swap" rel="stylesheet">
         <link rel="icon" 
               type="image/png" 
               href="img/Marshall_Logo_mini_icon.png">
+        <script>
+            function toggleNav() {
+                if (window.innerWidth > 769)
+                    return;
+                var items = document.querySelectorAll('nav a');
+                var len = items.length;
+                for (var i = 0; i < len; i++) {
+                    var vis = items[i].style.display + '';
+                    if (vis == 'block') {
+                        items[i].style.display = 'none';
+                        document.querySelector("nav button").innerHTML = "&#x2630;";
+                    } else {
+                        items[i].style.display = 'block';
+                        document.querySelector("nav button").innerHTML = "X";
+                    }
+                }
+                document.querySelector('nav a:first-of-type').style.display = 'inherit';
+
+            }
+        </script>
         <style>
             .gridContainer{
                 grid-template-columns: auto auto;
@@ -24,67 +45,6 @@ and open the template in the editor.
             */
             .gridContainer *{
                 font-family: sans-serif;
-            }
-            nav {
-                grid-column-start: 1;
-                grid-column-end: 7;
-                grid-row-start: 1;
-                grid-row-end: 2;
-                background-color: #000;
-                border-bottom: 1px solid #FBE9C5;
-                width: 100%;
-                top:0px;
-                left:0px;
-                color: #FFF;
-                position:fixed;
-                z-index: 5;
-            }
-            nav ul li{
-                list-style-type: none;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 24px;
-                font-family: 'Maven Pro', sans-serif;
-                font-weight: bolder;
-                padding: 20px 20px;
-                vertical-align: middle;
-                border-bottom: 1px solid #000;
-
-            }
-            nav ul li:first-of-type {
-                border: 1px solid #000;
-
-            }
-            nav ul li:hover {
-                -webkit-transition: 0.6s;
-                transition: 0.6s;
-                color: #CCC;
-                border-bottom: 1px solid #FBE9C5;
-            }
-            nav ul li:first-of-type:hover {
-                -webkit-transition: 1s;
-                transition: 0.6s;
-                color: #CCC;
-                border: 1px solid #FBE9C5;
-            }
-            nav ul li a {
-                text-decoration: none;
-                color: white;
-            }
-
-            nav ul {
-                margin:0px;
-                padding:0px;
-                top:0px;
-                left: 0px;
-            }
-            nav ul li img {
-                height: 70px;
-                width: auto;
-            }
-            nav p {
-                color: white;
-                margin: 0px;
             }
             aside{
                 padding-top: 90px;
@@ -178,15 +138,18 @@ and open the template in the editor.
         </style>
     </head>
     <body>
+        <nav>
+            <button style="color:#FFF;" onClick="toggleNav()">&#x2630;</button>
+            <a href="index.html" onClick="toggleNav()">
+                <img src="img/Marshall_Logo_sm.png" alt=""/>
+            </a>
+            <a href="products.html" onClick="toggleNav()">Products</a>
+            <a href="contact.html" onClick="toggleNav()">Contact</a>
+            <a href="about.html" onClick="toggleNav()">About</a>
+            <a href="purchase.html" onClick="toggleNav()">Cart</a>
+        </nav> 
         <div class="gridContainer">
-            <nav class="colStart1 colSpan2 rowStart1">
-                <ul>
-                    <li><a href="index.html"><img src="img/Marshall_Logo_sm.png" alt="Marshall Logo"/></a></li>
-                    <li><a href="products.html">PRODUCTS</a></LI>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT US</a></LI>
-                </ul>
-            </nav>
+
             <aside class="colStart1 rowStart2">
                 <h1>The Stanmore</h1>
                 <p>Small in size, but not subtle in sound, the Stanmore is a compact active stereo speaker that yields clean and precise sound even at high levels. Stanmore’s classic design is a throwback to the golden days of rock’n’roll, and its analogue interaction knobs give you custom control of your music. With a vintage-looking front fret, brass details, and iconic script logo, the Stanmore is right at home with the rest of your Marshall collection. Hook it up wirelessly via Bluetooth, use the RCA input to plug in your record player, or simply connect the coil cord that’s included to your phone using the 3.5mm auxiliary input. The Stanmore is also compatible with devices with optical output, like Apple TV.
@@ -280,15 +243,14 @@ and open the template in the editor.
                 </p>
 
             </section>
-            <footer class=" colStart1 colSpan2 rowStart3">
-                <footer>
-                    <ul>
-                        <li>©Marshall Co. 2020 & <i>Nerds With Style</i></li>
-                        <li><img src="img/instagram.png" alt="Instagram"/></li>                
-                        <li><img src="img/twitter.png" alt="Twitter"/></li>                   
-
-                    </ul>
-                </footer>
+            <footer>
+                <p>
+                    ©Marshall Co. 2020 & <i>Nerds With Style</i>
+                </p>
+                <p>
+                    <img style="height: 24px" src="img/instagram.png" alt="Instagram"/>                
+                    <img style="height: 24px" src="img/twitter.png" alt="Twitter"/>                 
+                </p>
             </footer>
         </div>
     </body>

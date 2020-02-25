@@ -1,11 +1,65 @@
 @media only screen and (max-width: 769px) {
-    .container, nav, .hero, .content {
+    .container, .hero, .content {
         display: flex;
         flex-direction: column;
     }
     .content a h1{
         font-size: 18px;
     }
+    .content .img {
+        display: none;
+    }
+    .content .message {
+        grid-column-start: 1;
+        grid-column-end: 4!important;
+        grid-row-start:2;
+        grid-row-end: 4;
+    }
+    .content .message p{
+        padding: 10px;
+
+    }
+    .content .btn {
+        grid-column-start: 2;
+        grid-column-end: 3!important;    
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    nav{
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+    }
+    nav a{
+        width: 100%;
+        display: none;
+    }
+    nav a:first-of-type{
+        margin-right: 0;
+        display: inherit;
+
+    }
+    nav a img{
+        margin-right: 0;
+        display: inherit;
+
+    }
+    nav button{
+        display: inherit!important;
+        position: absolute;
+        right: 10px;
+        bottom: 0px;
+        width: auto;
+        background-color: #000;
+        font-weight: bold;
+        padding: 10px;
+        color: white;
+        font-size: 22px;
+        border: none;
+        vertical-align: middle;
+    }
+
 }
 html {
     margin:-8px;
@@ -19,75 +73,48 @@ html {
 .container {
     display:grid;
     grid-template-columns: 20px auto auto auto 20px;
-    grid-template-rows: 90px auto auto auto 120px;
+    grid-template-rows: auto auto auto auto 120px;
     top:0px;
     left:0px;
     position:relative;
 }
-nav {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background-color: #000;
-    border-bottom: 1px solid #FBE9C5;
-    width: 100%;
-    top:0px;
-    left:0px;
-    color: #FFF;
-    position:fixed;
-    z-index: 5;
-}
-nav ul li{
-    list-style-type: none;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bolder;
-    padding: 20px 20px;
-    vertical-align: middle;
-    border-bottom: 1px solid #000;
-
-}
-nav ul li:first-of-type {
-    border: 1px solid #000;
-
-}
-nav ul li:hover {
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
-    color: #CCC;
-    border-bottom: 1px solid #FBE9C5;
-}
-nav ul li:first-of-type:hover {
-    -webkit-transition: 1s;
-    transition: 0.6s;
-    color: #CCC;
-    border: 1px solid #FBE9C5;
-}
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-nav ul {
-    margin:0px;
-    padding:0px;
-    top:0px;
-    left: 0px;
-}
-nav ul li img {
+nav{
+    display: flex;
+    flex-direction: row nowrap;
+    width: auto;
     height: 70px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    font-size: 24px;
+    border-bottom: 1px solid #FBE9C5;
+}
+nav a img{
+    margin-right: 60px;
+    height: 60px;
+}
+nav a{
     width: auto;
 }
-nav p {
+nav, nav a, footer, footer a{
+    background-color: #000;
+    color: #FFF;;
+    text-decoration: none;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+nav a:hover, footer a:hover{
     color: white;
-    margin: 0px;
+}
+nav button{
+    display: none;
 }
 .hero {
-    background-image: url(img/stanmore_hanwell.jpg);
-    background-attachment: fixed;
+    background-image: url(img/stanmore_13.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,9 +123,9 @@ nav p {
     grid-row-start: 2;
     grid-row-end: 3;
     width: 100%;
-    height: 600px;
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 40px 1fr 1fr 40px;
     grid-template-rows: 1fr 1fr 1fr; 
 }
 .text {
@@ -106,16 +133,15 @@ nav p {
     grid-column-end: 5;
     grid-row-start:2;
     grid-row-end: 3;
-    background-color: #000;
     font-family: 'Didact Gothic', sans-serif;
     color: white;
     text-align: center;
-/*    box-shadow: 24px 24px 16px #000;*/
+    /*    box-shadow: 24px 24px 16px #000;*/
 }
-.hero .text h1 {
-    font-size: 72px;
-    padding: 30px;
-    margin: 0px;
+.hero .text {
+    width: 100%;
+}
+.hero .text img {
 
 }
 .content {
@@ -124,8 +150,8 @@ nav p {
     grid-row-start: 3;
     grid-row-end: 4;
     background-color: #FFF;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto; 
 }
 .content .title {
@@ -143,11 +169,14 @@ nav p {
 }
 .content .message {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start:2;
     grid-row-end: 4;
     padding: 10px;
     font-size: 18px;
+}
+.message h1 {
+    text-align: center;
 }
 .content input {
     width: 100%;
@@ -156,13 +185,13 @@ nav p {
 }
 .content .btn {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start:5;
     grid-row-end: 6;
     border: none;
 }
 .btn a {
-    width: 45%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -171,6 +200,7 @@ nav p {
     text-decoration: none;
     color: white;
     margin-bottom: 15px;
+    font-size: 14px;
 }
 .content .btn a:hover {
     -webkit-transition: 0.2s;
@@ -184,8 +214,8 @@ nav p {
     color: white;
 }
 .content .img {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start:2;
     grid-row-end: 6;
     background-image: url(img/hanwell_04.jpg);
@@ -245,36 +275,15 @@ footer {
     grid-row-start: 5;
     grid-row-end: 6;
     background-color: #000;
+    display: flex;
+    flex-direction: column;
     bottom: 0px;
     left: 0px;
     right:0px;
 }
-footer ul{
-    margin: 0px;
-    display: block;
-    width: 50%;
-    margin-right:auto;
-    margin-left: auto;
-    vertical-align: middle;
-}
-footer ul li{
-    list-style-type: none;
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px 25px;
 
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bolder;
-    padding: 20px 20px;
-    color: white;
-    font-size: 20px;
-}
-footer ul li img {
-    height: 24px;
-
-}
 .contact{
-    background-image: url(img/marshalls_hp.jpeg);
+    background-image: url(img/hanwell_09.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,26 +297,26 @@ footer ul li img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; 
-  
+
 }
 
 .Cbody {
-font-family: 'Didact Gothic', sans-serif;
-text-align: center;
-size: 30px;
-padding: 0px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    size: 30px;
+    padding: 0px;
 
 }
 
 .location{
-   text-align: center;
-   size: 20px;
-   font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    size: 20px;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .email{
-  text-align: center;
-  margin-top: 360px;
+    text-align: center;
+    margin-top: 360px;
 }
 
 .btn{
