@@ -284,34 +284,54 @@ footer {
 
 .contact{
     background-image: url(img/hanwell_09.jpg);
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: none;
     background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 700px;
+}
+.about {
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 3;
-    width: 100%;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; 
+    padding: 15px;
+    background-color: #333;
+    color: #FFF;
+}
+.about p {
+    font-size: 17px;
 
 }
-
+.about h1 {
+    text-align: center;
+    font-size: 40px;
+}
 .Cbody {
     font-family: 'Didact Gothic', sans-serif;
     text-align: center;
-    size: 30px;
+    font-size: 25px;
     padding: 0px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
 
 }
 
 .location{
-    text-align: center;
-    size: 20px;
+    font-size: 20px;
+    padding: 10px;
     font-family: 'Didact Gothic', sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 .email{
